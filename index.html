@@ -21,6 +21,12 @@
       tailwind.config = {
         theme: {
           extend: {
+            screens:{
+                "xsm":{'max':'700px'
+
+                },
+
+            },
             backgroundImage: {
               "hero-bg": "url('./images/banner4.png')",
             },
@@ -135,9 +141,9 @@
         <div
           class="col-start-2 col-end-12 row-start-4 row-end-5 sm:hidden md:hidden lg:block"
         >
-          <div class="grid grid-cols-5 bg-white rounded-xl mx-auto">
+          <div class="xsm:hidden grid grid-cols-5 bg-white rounded-xl mx-auto">
             <div
-              class="min-w lg:block text-center h-40 p-7 space-y-3 mx-auto"
+              class=" lg:block text-center h-40 p-7 space-y-3 mx-auto"
             >
               <img src="./images/fruit1.png" alt="" />
               <p>Grape</p>
