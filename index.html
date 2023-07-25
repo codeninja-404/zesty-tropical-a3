@@ -4,21 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst | Look at the bottom of a monkey’s cage</title>
+
+    <!-- tailwind css and daisy ui cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome ui cdn -->
     <script
       src="https://kit.fontawesome.com/ff45585129.js"
       crossorigin="anonymous"
     ></script>
-
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              backgroundImage: {
+                "hero-bg": "url('./images/banner4.png')",
+              },
+            },
+          },
+        };
+      </script>
   </head>
   <body>
     <!-- header section -->
     <header class="container mx-auto">
+
+        <!-- nav section -->
       <nav class="bg-[#F85559] rounded-full">
         <div class="navbar px-10 py-5 my-7">
           <div class="navbar-start">
@@ -64,13 +79,17 @@
               </ul>
             </div>
           </div>
-          <div >
+          <div>
             <img src="./images/logo.png" alt="" />
-            <a class="btn btn-ghost normal-case text-4xl text-white">Fruit Burst</a>
+            <a class="btn btn-ghost normal-case text-4xl text-white"
+              >Fruit Burst</a
+            >
           </div>
 
           <div class="navbar-end">
-            <div class="rounded-full w-80 bg-white flex items-center justify-around">
+            <div
+              class="rounded-full w-80 bg-white flex items-center justify-around"
+            >
               <input
                 type="text"
                 placeholder="Search here"
@@ -81,6 +100,28 @@
           </div>
         </div>
       </nav>
+<!-- hero banner section -->
+      <section class="mb-10 px-2">
+        <div class="hero h-[550px] bg-hero-bg rounded-xl">
+          <div class="hero-overlay bg-opacity-40 rounded-xl"></div>
+          <div class="text-center text-neutral-content">
+            <div class="max-w-xl">
+              <h1 class="mb-5 text-6xl font-bold leading-relaxed text-white">
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="mb-5">We supply highly quality organic products</p>
+              <div class="">
+                <button
+                  type="submit"
+                  class="bg-[#F85559] text-white flex-none rounded-md px-6 py-4 text-sm font-semibold shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
+                >
+                Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
