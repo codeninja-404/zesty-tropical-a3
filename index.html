@@ -18,67 +18,25 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              backgroundImage: {
-                "hero-bg": "url('./images/banner4.png')",
-              },
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "hero-bg": "url('./images/banner4.png')",
             },
           },
-        };
-      </script>
+        },
+      };
+    </script>
   </head>
   <body>
     <!-- header section -->
     <header class="container mx-auto">
-
-        <!-- nav section -->
-      <nav class="bg-[#F85559] rounded-full">
-        <div class="navbar px-10 py-5 my-7">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li><a>Item 1</a></li>
-                <li>
-                  <a>Parent</a>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 text-white">
-                <li><a>Home</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
-              </ul>
-            </div>
-          </div>
+      <!-- nav section -->
+      <nav class="">
+        <div
+          class="bg-[#F85559] rounded-full navbar px-10 py-5 my-7 lg:hidden flex justify-between"
+        >
           <div>
             <img src="./images/logo.png" alt="" />
             <a class="btn btn-ghost normal-case text-4xl text-white"
@@ -86,23 +44,72 @@
             >
           </div>
 
-          <div class="navbar-end">
-            <div
-              class="rounded-full w-80 bg-white flex items-center justify-around"
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost text-white lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <input
-                type="text"
-                placeholder="Search here"
-                class="input focus:outline-none bg-transparent border-0"
-              />
-              <a href=""><i class="fa-brands fa-searchengin"></i></a>
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-[#F85559] rounded-full sm:hidden md: hidden lg:block">
+          <div class="navbar px-10 py-5 my-7">
+            <div class="navbar-start">
+              <div class="navbar-center lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white">
+                  <li><a>Home</a></li>
+                  <li><a>About Us</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>All Fruits</a></li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <img src="./images/logo.png" alt="" />
+              <a class="btn btn-ghost normal-case text-4xl text-white"
+                >Fruit Burst</a
+              >
+            </div>
+
+            <div class="navbar-end">
+              <div
+                class="rounded-full w-80 bg-white flex items-center justify-around"
+              >
+                <input
+                  type="text"
+                  placeholder="Search here"
+                  class="input focus:outline-none bg-transparent border-0"
+                />
+                <a href=""><i class="fa-brands fa-searchengin"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-<!-- hero banner section -->
-      <section class="mb-10 px-2">
-        <div class="hero h-[550px] bg-hero-bg rounded-xl">
+      <!-- hero banner section -->
+      <section class="mb-10 px-2 relative grid grid-rows-6 grid-cols-12 ">
+        <div class="hero h-[550px] bg-hero-bg rounded-xl col-span-full row-span-full ">
           <div class="hero-overlay bg-opacity-40 rounded-xl"></div>
           <div class="text-center text-neutral-content">
             <div class="max-w-xl">
@@ -115,10 +122,34 @@
                   type="submit"
                   class="bg-[#F85559] text-white flex-none rounded-md px-6 py-4 text-sm font-semibold shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
                 >
-                Shop Now
+                  Shop Now
                 </button>
               </div>
             </div>
+          </div>
+
+          <!-- bonus section-1 -->
+        </div>
+        <div class="grid grid-cols-5 bg-white rounded-xl mx-auto col-start-2 col-end-12 row-start-4 row-end-5 ">
+          <div class="text-center h-40 p-7 space-y-3 mx-auto">
+            <img src="./images/fruit1.png" alt="" />
+            <p>Grape</p>
+          </div>
+          <div class="text-center h-40 p-7 space-y-3 mx-auto">
+            <img src="./images/fruit2.png" alt="" />
+            <p>Orange</p>
+          </div>
+          <div class="text-center h-40 p-7 space-y-3 mx-auto">
+            <img src="./images/fruit3.png" alt="" />
+            <p>Mango</p>
+          </div>
+          <div class="text-center h-40 p-7 space-y-3 mx-auto">
+            <img src="./images/fruit4.png" alt="" />
+            <p>Strawberry</p>
+          </div>
+          <div class="text-center h-40 p-7 space-y-3 mx-auto">
+            <img src="./images/fruit5.png" alt="" />
+            <p>Pomagranate</p>
           </div>
         </div>
       </section>
